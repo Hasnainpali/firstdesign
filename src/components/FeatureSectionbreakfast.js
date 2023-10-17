@@ -59,7 +59,7 @@ function FeatureSectionbreakfast() {
       {data.map((Products) => {
         const { name, img, price } = Products;
         return (
-          <div className="border border-grey-200 hover:border-black hover:scale-105 transition-transform relative">
+          <div className="border border-grey-200 hover:border-black hover:scale-105  hover:m-2  transition-transform relative">
             <div className="justify-between items-center">
               <div className="w-full h-full p-2 ">
                 <img className="rounded-lg w-full" src={img} alt="productimage" />
