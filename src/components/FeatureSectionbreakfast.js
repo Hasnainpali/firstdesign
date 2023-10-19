@@ -57,9 +57,9 @@ function FeatureSectionbreakfast() {
     </div>
     <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 pt-4 gap-2">
       {data.map((Products) => {
-        const { name, img, price } = Products;
+        const { id,name, img, price } = Products;
         return (
-          <div className="border border-grey-200 hover:border-black hover:scale-105  hover:m-2  transition-transform relative">
+          <div key={id} className="border border-grey-200 hover:border-black hover:scale-105  hover:m-2  transition-transform relative">
             <div className="justify-between items-center">
               <div className="w-full h-full p-2 ">
                 <img className="rounded-lg w-full" src={img} alt="productimage" />

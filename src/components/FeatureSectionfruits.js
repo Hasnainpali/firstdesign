@@ -1,5 +1,6 @@
 import { AiFillStar } from "react-icons/ai";
-const data = [
+import React from "react";
+const user = [
   {
     id: 0,
     name: "Strawberry",
@@ -32,8 +33,10 @@ const data = [
   },
  
 ];
-
 function FeatureSectionfruits() {
+  
+ 
+
   return (
     <div className="container p-4">
       <div className="lg:flex justify-between items-center  ">
@@ -47,19 +50,20 @@ function FeatureSectionfruits() {
           <button className="text-white bg-green-900 p-2 active:bg-green-700 hover:bg-green-700 hover:text-white hover:p-2 rounded-lg">
             Fruits
           </button>
-          <button className="text-gray-500 hover:bg-green-700 hover:text-white hover:p-2">
+          <button className="text-gray-500 hover:bg-green-700 hover:text-white hover:p-2" 
+        > 
             Vegetables
           </button>
-          <button className="text-gray-500 hover:bg-green-700 hover:text-white hover:p-2">
+          <button className="text-gray-500 hover:bg-green-700 hover:text-white hover:p-2" >
             Breakfast
           </button>
         </div>
       </div>
       <div className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 pt-4 gap-2">
-        {data.map((Products) => {
-          const { name, img, price } = Products;
+         {user.map((Products) => {
+          const {id, name, img, price } = Products;
           return (
-            <div className="border border-grey-200 hover:border-black hover:scale-105 hover:m-2 transition-transform relative">
+            <div key={id} className="border border-grey-200 hover:border-black hover:scale-105 hover:m-2 transition-transform relative">
               <div className="justify-between items-center">
                 <div className="w-full h-full p-2 ">
                   <img className="rounded-lg w-full" src={img} alt="productimage" />
@@ -82,8 +86,10 @@ function FeatureSectionfruits() {
               </div>
             </div>
           );
-        })}
+        })} 
       </div>
+
+      
     </div>
   );
 }

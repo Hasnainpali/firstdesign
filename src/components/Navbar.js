@@ -126,7 +126,7 @@ function Navbar() {
             </Menu.Items>
           </Menu>
           </div>
-          <div className="relative w-1/2 md:w-96 md:ml-4 sm:mr-10">
+          <div className="relative w-1/2 md:w-96 md:ml-4 sm:mr-10 sm: grid-col-12">
             <input
               className="border p-2 pl-1 w-full rounded-full text-sm focus:outline-none md:pl-6 "
               type="text"
@@ -137,6 +137,7 @@ function Navbar() {
           <div className="flex md:flex-row space-x-4 text-white space-x-2 flex-col ">
             <div className="cursor-pointer hover:scale-y-110 ml-3 md:ml-0">
               <MdAccountCircle className="w-10 h-10 sm:w-8 h-8"/> <span className="text-lg sm:text-md">Account</span>
+ 
             </div>
             <div className="cursor-pointer hover:scale-y-110">
               <AiFillHeart className="w-10 h-10 sm:w-8 h-8"/> <span className="text-lg sm:text-md"> Wishlist </span>
