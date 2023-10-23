@@ -4,13 +4,16 @@ import { BsSearch } from "react-icons/bs";
 import { MdAccountCircle } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
 import { AiOutlineShoppingCart,AiOutlineBars } from "react-icons/ai";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 function Navbar() {
+
   return (
     <>
+    
       <div className="container bg-red-600 pt-4 ">
         <nav className="flex justify-between max-w-7xl m-auto p-4 md:p-2">
           <div className="text-3xl md:text-2xl lg:text-4xl mb-2 ">
@@ -134,6 +137,7 @@ function Navbar() {
             />
             <BsSearch className="absolute top-0 right-2 mt-2 ml-80  sm:top-0 right-1 mt-3 mr-0" />
           </div> 
+
           <div className="flex md:flex-row space-x-4 text-white space-x-2 flex-col ">
             <div className="cursor-pointer hover:scale-y-110 ml-3 md:ml-0">
               <MdAccountCircle className="w-10 h-10 sm:w-8 h-8"/> <span className="text-lg sm:text-md">Account</span>
@@ -253,6 +257,7 @@ function Navbar() {
           </div>
         </nav>
       </div>
+
     </>
   );
 }

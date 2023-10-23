@@ -78,6 +78,9 @@ function FeatureSectionbreakfast() {
                 <p className="text-red-600 text-[20px] ml-2 mb-2  ">
                   {price}
                 </p>
+                <button className=" m-2 py-2 px-2 bg-slate-100 text-lg font-semibold rounded-lg shadow-md hover:bg-green-800 focus:outline-none">
+                    <a href="/">Buy Now</a>
+                  </button>
               </div>
             </div>
           </div>

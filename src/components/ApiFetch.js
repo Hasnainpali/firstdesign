@@ -1,7 +1,8 @@
 import React,{useState,useEffect} from 'react'
+import { Link } from 'react-router-dom';
 
 function ApiFetch() {
-  const [data,setData]=useState([]);
+  const [data,setData]=useState([])
   
 
   useEffect(()=>{
@@ -26,8 +27,8 @@ function ApiFetch() {
            <h2 className='text-xl font-medium ' >Json FakeApi</h2>
     <div  className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 pt-4 gap-2">
       { 
-          data.map((val) => {
-               const { id } = val;
+          data.map((product) => {
+               const { id } = product;
                return (
                  <div
                    key={id}
@@ -35,12 +36,18 @@ function ApiFetch() {
                  >
                    <div className="justify-between items-center p-2">
                    <div className="h-100 rounded-lg mb-8">
-                       <img className="h-[250px] m-auto"src={val.image} alt={val.title} />
+                       <img className="h-[250px] m-auto"src={product.image} alt={product.title} />
                      </div>
                      <div className="space-y-4">
-                       <h3 className="font-medium text-xl">{val.title.substring(0,15)}</h3>
-                       <p className="text-grey-500 text-lg font-bold"> ${val.price}</p>
+                       <h3 className="font-medium text-xl">{product.title.substring(0,15)}</h3>
+                       <p className="text-grey-500 text-lg font-bold"> ${product.price}</p>
+                       <button className=" py-2 px-2 bg-blue-500 text-lg text-white font-semibold rounded-lg shadow-md hover:bg-blue-800 focus:outline-none">
+                      <Link to={`/ApiFetch/${product.id}`}>Buy Now</Link>
+                      </button>
                      </div>
+                  
+                      
+                    
                    
                    </div>
                  </div>
