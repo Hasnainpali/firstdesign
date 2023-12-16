@@ -1,25 +1,13 @@
-
-import Navbar from './components/Navbar';
-import Hero from "./components/Hero";
-import Category from "./components/Category";
-import FeatureSectionfruits from "./components/FeatureSectionfruits";
-import FeatureSectionbreakfast from "./components/FeatureSectionbreakfast";
-import Banner from "./components/Banner";
-import Footer from "./components/footer";
-
+import React from "react";
+import Form from "./Components/Form";
+import InputForm from "./Components/InputForm";
 
 
 function App() {
   return (
     <>
-      <Navbar/>
-      <Hero/>
-       <Category/>
-       <FeatureSectionfruits/>
-       <FeatureSectionbreakfast/>
-       <Banner/>
-       <Footer/>
-
+       <Form/>
+       {/* <InputForm/> */}
     </> 
   );
 }
